@@ -71,11 +71,33 @@ public class BankAccount {
     //işlevsel metodlar --> bu methodların testlerini oluşturyoruz
     //para çekme
     public Boolean withdraw(double amount){
-        return null;
+
+        //4 dumu kontrol etmişiz
+        if (amount>0 &&
+                amount<=this.balance &&
+                this.dailyWithdrawnAmount<this.dailyWithdrawLimit){// 1- Miktar pozitif olmalı, 2- Bakiye yeterli olmalı, 3- Günlük çekim limiti aşılmamalı
+            this.balance -= amount;// Bakiyeden çekilen miktarı düş
+            this.history.add("Para çekme : " + amount);// İşlem geçmişine para çekme işlemini ekle
+            this.dailyWithdrawnAmount += amount;// Günlük çekilen miktara ekle
+            return true;
+        }  else if (amount<=0){ // Miktar pozitif değilse hata fırlat
+            throw new RuntimeException("Miktar pozitif olmalıdır.");
+        } else {
+            return false;
+        }
+
     }
+
+
     //para yatırma
     public Boolean deposit(double amount){
-        return null;
+        if (amount>0){
+            this.balance+=amount;
+            this.history.add("Para yatırma : "+amount);
+            return true;
+        }else {
+            throw new RuntimeException("Miktar pozitif olmalı!");
+        }
     }
 
 
