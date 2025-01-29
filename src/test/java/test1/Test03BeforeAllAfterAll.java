@@ -42,7 +42,7 @@ public class Test03BeforeAllAfterAll {
         int expected = 2;
 
         assertEquals(expected,actual);
-        //assertTrue(actual==2);
+        assertTrue(actual==2);
         System.out.println("testMin çalıstı");
 
     }

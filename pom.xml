@@ -21,6 +21,21 @@
             <version>RELEASE</version> <!--yayında olan en son sürümü-->
             <scope>test</scope> <!-- run time test gibi skoplar kullanılabilir bu bağımlılık hangi kısımda gerekli oldunu belirtir run da mı test te mi onu belirtir.-->
         </dependency>
+        <!--Mockito : Mock obyeler oluşturma icin kullanılır.-->
+        <!-- MOCKITO https://mvnrepository.com/artifact/org.mockito/mockito-junit-jupiter -->
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-junit-jupiter</artifactId>
+            <version>4.5.1</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- MOCKITO https://mvnrepository.com/artifact/org.mockito/mockito-core -->
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <version>4.5.1</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
 </project>
